@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Locale;
 
-public class CountFileSizeWrapper {
+public class CommandLine {
     private static final String UNIT_KB = "kb".toLowerCase(Locale.ROOT);
     private static final String UNIT_MB = "mb".toLowerCase(Locale.ROOT);
     private static final String UNIT_GB = "gb".toLowerCase(Locale.ROOT);
