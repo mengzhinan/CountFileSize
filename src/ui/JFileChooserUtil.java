@@ -19,9 +19,9 @@ public class JFileChooserUtil {
         if (status == JFileChooser.OPEN_DIALOG && files != null && files.length > 0) {
             if (listener != null) {
                 listener.onFileSelected(files);
-                fileChooser = null;
             }
         }
+        fileChooser = null;
     }
 
     interface OnFileSelectInterface {

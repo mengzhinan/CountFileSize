@@ -9,6 +9,8 @@ public class JLabelUtil {
     private static JLabel label;
     private static final String TEXT_DEFAULT = "显示计算结果";
 
+    private static final String BR = "<br/>";
+
     private static JLabel getLabel() {
         if (label == null) {
             label = new JLabel();
@@ -30,27 +32,28 @@ public class JLabelUtil {
         if (getLabel() == null) {
             return;
         }
-        StringBuffer sb = new StringBuffer();
+        StringBuffer sb = new StringBuffer("<html>");
         String labelText = getLabel().getText();
         if (!TEXT_DEFAULT.contentEquals(labelText)) {
             sb.append(labelText);
-            sb.append("\r\n");
+            sb.append(BR);
         }
         for (int i = 0; i < files.length; i++) {
             File file = files[i];
             if (!file.exists()) {
                 sb.append(file.getName());
                 sb.append(" -> 文件不存在");
-                sb.append("\r\n");
+                sb.append(BR);
             } else {
                 sb.append(file.getName());
                 sb.append(" -> 大小为：");
                 sb.append(file.length() * 1.0F / unitLong);
                 sb.append(" ");
                 sb.append(unitStr.toUpperCase(Locale.ROOT));
-                sb.append("\r\n");
+                sb.append(BR);
             }
         }
+        sb.append("</html>");
         getLabel().setText(sb.toString());
     }
 
