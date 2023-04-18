@@ -1,6 +1,6 @@
 # 请先安装 JDK & 配置环境变量
-# 如果双击当前 start.command 文件无法运行，请修改文件执行权限
-# - (右键属性修改或者 chmod u+x start.command)
+# 如果双击当前 start_for_mac.command 文件无法运行，请修改文件执行权限
+# - (右键属性修改或者 chmod u+x start_for_mac.command)
 
 echo 当前 Java 程序正在运行中，请勿关闭此窗口!
 parent_dir=$(dirname "$0")
