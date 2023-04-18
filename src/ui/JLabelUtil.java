@@ -53,12 +53,14 @@ public class JLabelUtil {
                 sb.append(file.getName());
                 sb.append(" -> 文件不存在");
                 sb.append(BR);
+                sb.append(BR);
             } else {
                 sb.append(file.getName());
                 sb.append(" -> 大小为：");
                 sb.append(file.length() * 1.0F / unitLong);
                 sb.append(" ");
                 sb.append(unitStr.toUpperCase(Locale.ROOT));
+                sb.append(BR);
                 sb.append(BR);
             }
         }
